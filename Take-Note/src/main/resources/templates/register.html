@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org"
+	th:replace="~{ base :: layout( ~{::title}, ~{::section} ) }">
+<head>
+<meta charset="UTF-8">
+<title>Register:: Take Note</title>
+</head>
+<body>
+	<section>
+		<!-- table code -->
+
+		<div class="container mt-5">
+			<div class="row">
+				<div class="col-md-6 offset-md-3">
+					<div class="card mt-3">
+						
+						<div class="card-header text-center"> 
+							<h3>Register Page</h3>
+						</div>
+						
+						<div class="card-body">
+
+							
+							<form th:action="@{/registerEmployee}" method="post">
+								
+								<div class="mb-3">
+									<label for="exampleFormControlSelect1">Full Name :</label> <input
+										class="form-control" type="text" name="empName"
+										 required="required" />
+								</div>
+
+								<div class="mb-3">
+									<label for="exampleFormControlSelect1">Email</label> <input
+										class="form-control" type="email" name="empEmail"
+										/>
+								</div>
+								<div class="mb-3">
+									<label for="exampleFormControlSelect1">Address </label> <input
+										class="form-control" type="text" name="empAddress"
+										 required="required" />
+								</div>
+								<div class="mb-3">
+									<label for="exampleFormControlSelect1">Phone No </label> <input
+										class="form-control" type="number" name="empPhone"
+										 required="required" />
+								</div>
+								<!-- <div class="mb-3">
+								<label for="user_gender">Select Gender</label> <br> <input
+									type="radio" id="emp_gender" name="empGender" value="male">Male
+								<input type="radio" id="emp_gender" name="empGender"
+									value="female">Female
+							</div> -->
+								<div class="mb-3">
+									<label for="exampleFormControlSelect1">Salary</label> <input
+										class="form-control" type="number" name="empSalary"
+										 required="required" />
+								</div>
+
+								<div>
+									<button type="submit" class="btn bg-wasim col-md-12 text-white">Submit</button>
+								</div>
+
+							</form>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+
+		<!-- end of table code -->
+	</section>
+</body>
+</html>
