@@ -6,7 +6,50 @@
 </head>
 <body>
 <section>
-	<h3>Login Page</h3>
+	<!-- table code -->
+
+		<div class="container mt-5">
+			<div class="row">
+				<div class="col-md-6 offset-md-3">
+					<div class="card mt-3">
+						
+						<div class="card-header text-center"> 
+							<h3>Register Page</h3>
+						</div>
+						
+						<div class="card-body">
+
+							
+							<form th:action="@{/registerEmployee}" method="post">
+								
+								<div class="mb-3">
+									<label for="exampleFormControlSelect1">Username/Email :</label> <input
+										class="form-control" type="text" name="username"
+										 required="required" />
+								</div>
+
+								<div class="mb-3">
+									<label for="exampleFormControlSelect1">Password</label> <input
+										class="form-control" type="password" name="empEmail"
+										/>
+								</div>
+								
+
+								<div>
+									<button type="submit" class="btn bg-wasim col-md-12 text-white">Submit</button>
+								</div>
+
+							</form>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+
+		<!-- end of table code -->
 </section>
 
 </body>
