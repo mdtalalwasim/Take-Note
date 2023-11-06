@@ -1,12 +1,62 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="www.thymeleaf.org" th:replace="~{ base :: layout( ~{::title}, ~{::section} ) }">
+<html lang="en" xmlns:th="www.thymeleaf.org"
+	th:replace="~{ base :: layout( ~{::title}, ~{::section} ) }">
 <head>
 <meta charset="UTF-8">
 <title>View Notes:: Take Note</title>
+
+<style>
+/* .ws{
+  
+  box-shadow: 0px 2px 15px rgba(0, 0, 20, 0.9)!important;
+} */
+</style>
 </head>
+
 <body>
-<section>
-	<h3>View Notes Page</h3>
-</section>
+	<section>
+		<!-- table code -->
+
+		<div class="container-fluid mt-3">
+			<div class="row">
+				<div class="col-md-10 offset-md-1">
+					<div class="card mt-3">
+
+						
+
+				
+						<div class="card-body ws">
+							<h3 class="text-center fs-2 text-info">View Notes</h3>
+							<div class="text-center">
+								<i class="fa-solid fa-book fa-2x"></i>
+							</div>
+							
+							<p>What Java Spring Boot?</p>
+							
+							<p>Java Spring Boot (Spring Boot) is a tool that makes
+								developing web application and microservices with Spring
+								Framework faster and easier through three core capabilities:
+								Autoconfiguration. An opinionated approach to configuration. The
+								ability to create standalone applications.</p>
+							
+							<p>Publish Date: 2023-11-06</p>
+
+							<div class="text-center">
+							<a href="edit-notes" class="btn btn-sm btn-info">Edit</a>
+							<a href="" class="btn btn-sm btn-danger">Delete</a>
+							</div>
+
+						</div>
+
+
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+
+		<!-- end of table code -->
+	</section>
 </body>
 </html>

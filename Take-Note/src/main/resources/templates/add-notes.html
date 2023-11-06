@@ -1,13 +1,58 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="www.thymeleaf.org" th:replace="~{ base :: layout( ~{::title}, ~{::section} ) }">
+<html lang="en" xmlns:th="www.thymeleaf.org"
+	th:replace="~{ base :: layout( ~{::title}, ~{::section} ) }">
 <head>
 <meta charset="UTF-8">
 <title>Add Notes:: Take Note</title>
 </head>
-<body>.
-<section>
-	<h3>Add Notes</h3>
-</section>
+<body>
+	.
+	<section>
+		<!-- table code -->
+
+		<div class="container mt-3">
+			<div class="row">
+				<div class="col-md-6 offset-md-3">
+					<div class="card mt-3">
+
+						<div class="card-header text-center">
+							<h3>Add Notes</h3>
+						</div>
+
+						<div class="card-body">
+
+
+							<form action="" method="post">
+
+								<div class="mb-3">
+									<label for="exampleFormControlSelect1">Title</label>
+									<input class="form-control" type="text" name="title"
+										required="required" />
+								</div>
+
+								<div class="mb-3">
+									<label for="exampleFormControlSelect1">Description</label>
+									<textarea rows="6" cols="" class="form-control" name="description"></textarea> 
+								</div>
+
+
+								<div>
+									<button type="submit" class="btn bg-wasim col-md-12 text-white">Save</button>
+								</div>
+
+							</form>
+						</div>
+						
+
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+
+		<!-- end of table code -->
+	</section>
 
 </body>
 </html>

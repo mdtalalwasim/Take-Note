@@ -14,13 +14,13 @@
 					<div class="card mt-3">
 						
 						<div class="card-header text-center"> 
-							<h3>Register Page</h3>
+							<h3>Login</h3>
 						</div>
 						
 						<div class="card-body">
 
 							
-							<form th:action="@{/registerEmployee}" method="post">
+							<form action="" method="post">
 								
 								<div class="mb-3">
 									<label for="exampleFormControlSelect1">Username/Email :</label> <input
@@ -30,7 +30,7 @@
 
 								<div class="mb-3">
 									<label for="exampleFormControlSelect1">Password</label> <input
-										class="form-control" type="password" name="empEmail"
+										class="form-control" type="password" name="password"
 										/>
 								</div>
 								
@@ -40,6 +40,11 @@
 								</div>
 
 							</form>
+						</div>
+						<div class="card-footer text-center">
+							<p class="fs-6">Don't have an account?
+							<a href="register" style="text-decoration:none;">Register</a>
+							</p>
 						</div>
 
 					</div>
