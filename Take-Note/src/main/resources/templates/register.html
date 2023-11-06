@@ -24,37 +24,40 @@
 							<form th:action="@{/registerEmployee}" method="post">
 								
 								<div class="mb-3">
-									<label for="exampleFormControlSelect1">Full Name :</label> <input
-										class="form-control" type="text" name="empName"
+									<label for="exampleFormControlSelect1">Name :</label> <input
+										class="form-control" type="text" name="name"
 										 required="required" />
 								</div>
 
 								<div class="mb-3">
 									<label for="exampleFormControlSelect1">Email</label> <input
-										class="form-control" type="email" name="empEmail"
+										class="form-control" type="email" name="email"
 										/>
 								</div>
 								<div class="mb-3">
 									<label for="exampleFormControlSelect1">Address </label> <input
-										class="form-control" type="text" name="empAddress"
+										class="form-control" type="text" name="address"
 										 required="required" />
 								</div>
 								<div class="mb-3">
 									<label for="exampleFormControlSelect1">Phone No </label> <input
-										class="form-control" type="number" name="empPhone"
+										class="form-control" type="number" name="phone"
 										 required="required" />
 								</div>
+								<!-- <div class="mb-3">
+									<label for="gender">Select Gender</label> <br> 
+									<input type="radio" id="male_gender" name="gender" value="male">Male
+									<input type="radio" id="female_gender" name="gender" value="female">Female
+								</div> -->
+
 								<div class="mb-3">
-								<label for="user_gender">Select Gender</label> <br> <input
-									type="radio" id="emp_gender" name="empGender" value="male">Male
-								<input type="radio" id="emp_gender" name="empGender"
-									value="female">Female
-							</div> 
-								<div class="mb-3">
-									<label for="exampleFormControlSelect1">Salary</label> <input
-										class="form-control" type="number" name="empSalary"
-										 required="required" />
+									<label for="maleRadio">Select Gender</label><br> <input
+										type="radio" id="maleRadio" name="gender" value="male">
+									<label for="maleRadio">Male</label> <input type="radio"
+										id="femaleRadio" name="gender" value="female"> <label
+										for="femaleRadio">Female</label>
 								</div>
+
 
 								<div>
 									<button type="submit" class="btn bg-wasim col-md-12 text-white">Submit</button>
