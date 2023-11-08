@@ -15,12 +15,21 @@
 						
 						<div class="card-header text-center"> 
 							<h3>Login</h3>
+							
+							<th:block th:if="${param.error}">
+								<p class="text-center text-danger fs-5">[[${session.SPRING_SECURITY_LAST_EXCEPTION.message}]]</p>
+							</th:block>
+							
+							<th:block th:if="${param.logout}">
+								<p class="text-center text-success fs-5">Logout Successfully.</p>
+							</th:block>
+							
 						</div>
 						
 						<div class="card-body">
 
 							
-							<form action="" method="post">
+							<form action="user-login" method="post">
 								
 								<div class="mb-3">
 									<label for="exampleFormControlSelect1">Username/Email :</label> <input
