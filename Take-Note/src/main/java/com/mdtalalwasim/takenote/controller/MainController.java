@@ -75,7 +75,7 @@ public class MainController {
 		
 		
 		
-		return "register";
+		return "redirect:/register";
 	}
 	
 	

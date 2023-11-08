@@ -18,6 +18,7 @@
 							<h3>Register</h3>
 							<th:block th:if="${session.message}">
 								<p class="fs-5 text-center text-success">[[${session.message}]]</p>
+								<th:block th:text="${@userServiceImpl.removeSesstionMessage()}"></th:block>
 							</th:block>
 						</div>
 						

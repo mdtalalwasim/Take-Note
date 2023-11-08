@@ -2,10 +2,14 @@ package com.mdtalalwasim.takenote.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.context.request.RequestContextHolder;
+import org.springframework.web.context.request.ServletRequestAttributes;
 
 import com.mdtalalwasim.takenote.entity.User;
 import com.mdtalalwasim.takenote.repository.UserRepository;
 import com.mdtalalwasim.takenote.service.UserService;
+
+import jakarta.servlet.http.HttpSession;
 
 @Service
 public class UserServiceImpl implements UserService{
@@ -31,6 +35,12 @@ public class UserServiceImpl implements UserService{
 	public User getUserByEmail(String email) {
 		// TODO Auto-generated method stub
 		return this.userRepository.findByEmail(email);
+	}
+	
+	//remove Sesstion Message
+	public void removeSesstionMessage() {
+		HttpSession session = ((ServletRequestAttributes)RequestContextHolder.getRequestAttributes()).getRequest().getSession();
+		session.removeAttribute("message");
 	}
 	
 	
