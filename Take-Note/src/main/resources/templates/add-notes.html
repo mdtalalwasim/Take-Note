@@ -17,12 +17,16 @@
 
 						<div class="card-header text-center">
 							<h3>Add Notes</h3>
+							<th:block th:if="${session.message}">
+								<p class="fs-5 text-center text-success">[[${session.message}]]</p>
+								<th:block th:text="${@userServiceImpl.removeSesstionMessage()}"></th:block>
+							</th:block>
 						</div>
 
 						<div class="card-body">
 
 
-							<form action="" method="post">
+							<form action="save-notes" method="post">
 
 								<div class="mb-3">
 									<label for="exampleFormControlSelect1">Title</label>
