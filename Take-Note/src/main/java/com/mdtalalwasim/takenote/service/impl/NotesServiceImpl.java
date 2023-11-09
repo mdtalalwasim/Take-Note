@@ -38,7 +38,7 @@ public class NotesServiceImpl implements NotesService {
 
 	@Override
 	public Notes updateNotes(Notes notes) {
-		
+		System.out.println("Ha ha ha :"+notes.getId());;
 		return this.notesRepository.save(notes);
 	}
 
@@ -46,6 +46,7 @@ public class NotesServiceImpl implements NotesService {
 	public boolean deleteNotes(Integer noteId) {
 		Optional<Notes> notes = this.notesRepository.findById(noteId);
 		if(notes.isPresent()) {
+			this.notesRepository.deleteById(noteId);
 			return true;
 		}
 		return false;

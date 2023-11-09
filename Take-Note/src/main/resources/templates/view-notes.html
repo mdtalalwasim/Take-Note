@@ -19,31 +19,30 @@
 
 		<div class="container-fluid mt-3">
 			<div class="row">
-				<div class="col-md-10 offset-md-1">
+				<div th:each="allNotes: ${listOfNotesByUser}" class="col-md-10 offset-md-1">
 					<div class="card mt-3">
 
-						
-
-				
 						<div class="card-body ws">
 							<h3 class="text-center fs-2 text-info">View Notes</h3>
+							<th:block th:if="${session.message}">
+								<p class="fs-5 text-center text-success">[[${session.message}]]</p>
+								<th:block th:text="${@userServiceImpl.removeSesstionMessage()}"></th:block>
+							</th:block>
+							
+							
 							<div class="text-center">
 								<i class="fa-solid fa-book fa-2x"></i>
 							</div>
 							
-							<p>What Java Spring Boot?</p>
+							<p class="fw-bold">[[${allNotes.title}]]</p>
 							
-							<p>Java Spring Boot (Spring Boot) is a tool that makes
-								developing web application and microservices with Spring
-								Framework faster and easier through three core capabilities:
-								Autoconfiguration. An opinionated approach to configuration. The
-								ability to create standalone applications.</p>
+							<p>[[${allNotes.description}]]</p>
 							
-							<p>Publish Date: 2023-11-06</p>
+							<p>Publish Date: <span class="fw-bold text-primary">[[${allNotes.createdAt}]]</span></p>
 
 							<div class="text-center">
-							<a href="edit-notes" class="btn btn-sm btn-info">Edit</a>
-							<a href="" class="btn btn-sm btn-danger">Delete</a>
+							<a th:href="@{'edit-notes/'+${allNotes.id}}" class="btn btn-sm btn-info">Edit</a>
+							<a th:href="@{'delete-notes/'+${allNotes.id}}" class="btn btn-sm btn-danger">Delete</a>
 							</div>
 
 						</div>
