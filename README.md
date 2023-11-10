@@ -29,12 +29,35 @@ Take Note is a Mini Spring Boot MVC Web Application.
 
 <hr>
 
+<h1>How to Run this Project:</h1>
+
+- First <b>Clone</b> Take-Note Repo. Link: https://github.com/mdtalalwasim/Take-Note.git
+- Create Database
+- Please make the necessary changes to application.properties files as your requirements: <b>Please Follow the below guidelines.</b>
+
+
+
+<h3>Project Application Properties Files:</h3>
+<p>Please go to project 'application.properties' files and make changes here</p>
+<br>#for changing the default port number.
+<br>server.port=8080
+
+#db configuration  
+<br>spring.datasource.url=jdbc:mysql://localhost:3306/"Put_Here_Your_Database_Name"
+<br>spring.datasource.username ="Put_Here_Your_Mysql_Username"
+<br>spring.datasource.password ="Put_Here_Your_Mysql_Password"
+<br>spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+<br>spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL8Dialect
+<br>spring.jpa.hibernate.ddl-auto=update
+<br>spring.jpa.show-sql=true
+
+
+
 # Project Image is given below:
 
 <h3>Project ER Diagram:</h3><br>  
 
 ![Note-Taker-Spring-Boot-Talal_Wasim](https://github.com/mdtalalwasim/Take-Note/assets/91146041/98a0aa6d-2c08-45d6-a3bf-b6d3d82a2c66)
-
 
 
 # Index:
@@ -83,20 +106,6 @@ Take Note is a Mini Spring Boot MVC Web Application.
 
 
 
-
-<br><br><b>Application Properties Files:</b>
-
-<br>#for changing the default port number.
-<br>server.port=8080
-
-#db configuration  
-<br>spring.datasource.url=jdbc:mysql://localhost:3306/"your_db_name"
-<br>spring.datasource.username ="your_username"
-<br>spring.datasource.password ="your_password"
-<br>spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
-<br>spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL8Dialect
-<br>spring.jpa.hibernate.ddl-auto=update
-<br>spring.jpa.show-sql=true
 
 
 ### Things you should know about me:
